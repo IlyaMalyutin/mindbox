@@ -105,7 +105,6 @@ class ProductTest(unittest.TestCase):
         cases = [
             [1, 1900 / 4, 4 * 100],
         ]
-        print(result)
         for product_id, mean_order, amount in cases:
             _report = result[result.ProductId == product_id]
             self.assertEqual(mean_order, _report.iloc[0].MeanOrderAmount, product_id)
